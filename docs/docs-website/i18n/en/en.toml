@@ -1,0 +1,121 @@
+#list page
+[hot_document]
+other = "Hot documents"
+
+[A-Tune_content]
+other = "This document describes how to install and use A-Tune, which is a performance self-optimization software for openEuler."
+
+[A-Tune_header]
+other = "A-Tune User Guide"
+
+[A-Tune_link]
+other = "/en/docs/20.03_LTS/docs/A-Tune/A-Tune.html"
+
+[secGear_content]
+other = "This document provides common administrator operations of the openEuler system to help administrators better use the system. This document is intended for all administrators who use openEuler."
+
+[secGear_header]
+other = "Administrator Guide"
+
+[secGear_link]
+other = "/en/docs/20.03_LTS/docs/Administration/administration.html"
+
+[StratoVirt_content]
+other = "This document is intended for openEuler users who need to install containers. "
+
+[StratoVirt_header]
+other = "Container User Guide"
+
+[StratoVirt_link]
+other = "/en/docs/20.03_LTS/docs/Container/container.html"
+
+[container_content]
+other = "This guide describes how to install Huawei openEuler."
+
+[container_header]
+other = "Installation Guide"
+
+[container_link]
+other = "/en/docs/20.03_LTS/docs/Installation/Installation.html"
+
+[quick_search]
+other = "Quick search"
+
+[version_selection]
+other = "Version selection"
+
+[version_text]
+other = "Version"
+
+[current_lang]
+other = "English"
+
+[search]
+other = "search"
+
+[search_placeholder]
+other = "Input content"
+
+[quick_links]
+other = "Quick links"
+
+[kunpeng_community]
+other = "Kunpeng community"
+
+[document_link]
+other = "Documentation"
+
+[openeuler_document]
+other = "openEuler Documentation" 
+
+[catalog_text]
+other = "Content"
+
+[other_text]
+other = "Reference Links"
+
+[know_94_1]
+other = "/en/docs/20.03_LTS_SP2/docs/Releasenotes/terms-of-use.html"
+[know_95_1]
+other = "/en/docs/21.03/docs/Releasenotes/terms-of-use.html"
+[know_96_1]
+other = "/en/docs/20.03_LTS_SP1/docs/Releasenotes/terms-of-use.html"
+[know_97_1]
+other = "/en/docs/20.09/docs/Releasenotes/terms-of-use.html"
+[know_98_1]
+other = "/en/docs/20.03_LTS/docs/Releasenotes/terms-of-use.html"
+
+[copy_right]
+other = "Copyright © 2021 openEuler. All rights reserved."
+
+[attention]
+other = "WeChat Subscription"
+
+[source_code]
+other = "Source Code"
+
+[feedbook]
+other = "Feedback"
+
+[previous]
+other = "Previous"
+
+[next]
+other = "Next"
+
+[evaluate]
+other = "Rating"
+
+#search page
+
+[result_1]
+other = " "
+
+[result_2]
+other = " search results about "
+
+[result_3]
+other = " are found"
+
+[hot_docs_version]
+other = "20.03 LTS"
