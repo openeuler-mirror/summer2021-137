@@ -4,9 +4,9 @@
     <meta name="googlebot" content="index,follow,snippet,archive">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {{ $versionArr := split $.File.Path "docs\\" }}
+    {{ $versionArr := split $.File.Path "docs/" }}
     {{ $version := index $versionArr 1}}
-    {{ $version := split $version "\\" }}
+    {{ $version := split $version "/" }}
     {{ $version := index $version 0}}
     {{ $title := "" }}
     {{ if .Title }}

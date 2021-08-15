@@ -12,9 +12,9 @@
         {{ partial "nav.html" . }}
       </header>
       <div id="content">
-        {{ $versionArr := split $.File.Path "docs\\" }}
+        {{ $versionArr := split $.File.Path "docs/" }}
         {{ $version := index $versionArr 1}}
-        {{ $version := split $version "\\" }}
+        {{ $version := split $version "/" }}
         {{ $version := index $version 0}}
         {{ $lang := .Site.LanguageCode}}
           <main class="docscontainer">
