@@ -1,0 +1,214 @@
+# home page
+[main_home_logo]
+other = "/zh"
+
+[main_partner_title]
+other = "社区会员"
+
+[main_osDistribution_title]
+other = "基于openEuler的OS发行版"
+
+[main_FriendlyCommunities_title]
+other = "友情链接"
+
+[main_partner_subtitle]
+other = "会员中心正在构建中，敬请期待"
+
+[main_email_subscribe_title]
+other = "邮件订阅"
+
+[main_email_subscribe_buttontext]
+other = "订阅"
+
+[main_apply_source]
+other = "测试资源申请"
+
+[main_postablog_source]
+other = "写博客"
+
+[main_blog_pageview]
+other = "总浏览量"
+
+[main_blog_pageview_units]
+other = "次"
+
+[main_apply_description]
+other= "如果缺乏测试设备，可以尝试在此申请。"
+
+[main_apply_guidance]
+other = "申请指南"
+
+[main_apply_guidanceLink]
+other = "/zh/blog/2020/03/25/2020-03-25-apply-for-vm-from-pcl.html"
+
+[main_apply_thanks]
+other = "感谢"
+
+[main_apply_pengchenLab]
+other ="鹏城实验室"
+
+[main_apply_pengchenLink]
+other ="https://dw.pcl.ac.cn/dwmain/main/"
+
+[main_apply_sponsore]
+other = "赞助"
+
+[main_cards_title]
+other = "欢迎加入openEuler社区"
+
+[main_cards_description]
+other = "openEuler通过社区合作，打造创新平台，构建支持多处理器架构、统一和开放的操作系统，推动软硬件应用生态繁荣发展。"
+
+[main_cards_first_link]
+other = "/zh/summit/2020-virtual-summit.html"
+
+[main_cards_title_second]
+other = "iSula"
+
+[main_cards_title_enter_repository]
+other = ">>更多"
+
+[main_cards_connect]
+other = "https://e.huawei.com/cn/solutions/hic?utm_campaign=04MHQHQ20W6R9P&utm_medium=pm-display&utm_source=openeluer&source=openeluer&utm_content=hic_hc_2020"
+
+[main_nav_repository]
+other = "代码仓"
+
+[main_nav_packageSources]
+other = "软件包仓"
+
+[main_cards_description_second]
+other = "iSula是一种云原生轻量级容器解决方案，可通过统一、灵活的架构满足ICT领域端、边、云场景的多种需求。"
+
+[main_cards_title_third]
+other = "A-Tune"
+
+[main_cards_description_third]
+other = "A-Tune是智能性能优化系统软件，即通过机器学习引擎对业务应用建立精准模型, 再根据业务负载智能匹配最佳操作系统配置参数组合，实现系统整体运行效率提升。"
+
+[main_events_title]
+other = "活动"
+
+[main_news_title]
+other = "新闻"
+
+[main_blog_title]
+other = "博客"
+
+[main_list_more]
+other = "更多"
+
+[main_events_subtitle]
+other = "事件"
+
+[main_news_subtitle]
+other = "新闻"
+
+[main_blog_subtitle]
+other = "博客"
+
+[main_nav_news_name]
+other = "新闻"
+
+[sig_mail_list]
+other = "邮件列表频道: "
+
+[sig_IRC_channel]
+other = "IRC频道: "
+
+[sig_maintainers]
+other = "管理员: "
+
+[sig_homepage]
+other = "首页: "
+
+[main_mail_more]
+other = "更多订阅请点击"
+
+[main_mail_more_link]
+other = "/zh/community/mails.html"
+
+[main_faq]
+other = "/zh/about_openeuler/docs/whtisopeneuler.html"
+
+[main_mail_more_list]
+other = "邮件列表"
+# DOC page
+[doc_git_footer]
+other = "意见反馈"
+
+# 404 page
+[404_title]
+other = "没有找到页面"
+[404_homepage]
+other = "返回首页"
+
+[docs_nav_menu_name]
+other = "目录"
+
+[download_title]
+other = "下载ISO"
+
+[download_issues]
+other = "如果您遇到问题，请在此提交问题:"
+
+[download_releaseNote]
+other = "发行说明:"
+
+[download_getiso]
+other = "获取ISO:"
+
+[download_installationGuide]
+other = "安装指南:"
+
+[download_versionsUrl]
+other = "/zh/releases.html"
+
+[download_allRelease]
+other = "获取全部版本>>"
+
+[download_lifecycle]
+other = "生命周期:"
+
+[versions_versionPlan]
+other = "版本计划"
+
+[versions_versionName]
+other = "版本"
+
+[versions_status]
+other = "状态"
+
+[versions_releaseTime]
+other = "发行时间"
+
+[versions_EOLTime]
+other = "EOL时间"
+
+[versions_releaseNote]
+other = "发行说明"
+
+[versions_getiso]
+other = "ISO"
+
+[versions_installationGuide]
+other = "安装指南"
+
+
+[main_cards_summer2020_link]
+other = "/zh/events/20200607.html"
+
+[main_cards_live_title]
+other = "iSula容器之系统容器介绍"
+
+[main_cards_live_subtitle]
+other = "玩转openEuler系列直播之iSula容器专题（7）"
+
+[main_cards_live_time]
+other = "9月15号（周二） 20：00—21：00 "
+
+[main_cards_live_des]
+other = "B站openEuler直播间"
+
+[main_footer_QRcode]
+other = "扫码关注公众号"

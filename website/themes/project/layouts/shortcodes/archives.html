@@ -1,0 +1,16 @@
+<div class="div-archives">
+    {{ range where $.Page.Site.Pages "Type" "maillist" }}
+    {{ if .Params }}
+    <div>
+        <ul>
+            <li class="isPc">
+                <b>{{ .Params.listname }}</b> : <a href="{{ .Params.archivelink}}" target="_blank">{{ .Params.archivelink }}</a>
+            </li>
+            <li class="isH5">
+                <a href="{{ .Params.archivelink}}" target="_blank"><b>{{ .Params.listname }}</b></a>
+            </li>
+        </ul>
+    </div>
+    {{ end }}
+    {{ end }}
+</div>

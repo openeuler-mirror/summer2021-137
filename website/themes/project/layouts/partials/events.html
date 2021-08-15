@@ -1,0 +1,27 @@
+{{ if isset .Site.Params "events" }}
+{{ if .Site.Params.events.enable }}
+        <div class="events active">
+                <h2>
+                    {{ i18n "main_events_title" }}
+                    <a href="{{ "/events.html" | relLangURL  }}" target="_blank">
+                        <p>{{ i18n "main_list_more" }} ></p>
+                    </a>
+                </h2>
+
+                <ul>
+                {{ $events := where .Data.Pages "Type" "events" }}
+                {{ range first 4 $events }}
+                <li>
+                        <h6>
+                            <span>{{ i18n "main_events_subtitle" }}</span> <i>|</i> <span>{{ .Date.Format .Site.Params.date_format }}</span>
+                        </h6>
+                        <a href="{{ .URL }}">
+                            <p>{{ .Title }}</p>
+                        </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+
+{{ end }}
+{{ end }}

@@ -1,0 +1,26 @@
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th><span>{{ default "IRC Channel" (.Get 0) }}</span></th>
+                <th><span>{{ default "Description" (.Get 1) }}</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ range where $.Page.Site.Pages "Type" "ircs" }}
+            {{ if .Params }}
+            {{ if .Params.visible }}
+            <tr>
+                <td>
+                    <a href="{{ .Params.link}}">{{ .Params.channelname }}</a>
+                </td>
+                <td>
+                    {{ .Params.description }}
+                </td>
+            </tr>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+        </tbody>
+    </table>
+</div>

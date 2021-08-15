@@ -1,0 +1,22 @@
+{{ if .Site.Params.widgets.archives }}
+{{ if isset .Site.Taxonomies "archives" }}
+{{ if not (eq (len .Site.Taxonomies.archives) 0) }}
+{{$lan := index (split .URL "/") 1 }}
+<div class="panel sidebar-menu">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ i18n "archivesTitle" }}</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            {{ range (where .Site.RegularPages "Section" "blog").GroupByDate "2006-01" }}
+            <li> <a href="{{ $.Site.BaseURL }}{{$lan}}/archives/{{ .Key | urlize }}.html"><i
+                        class="fa fa-tags"></i>{{ .Key }}({{ len .Pages }})</a><br>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
+{{ end }}
+{{ end }}
+{{ end }}

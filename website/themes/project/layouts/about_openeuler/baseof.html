@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+{{ partial "head.html" . }}
+{{ partial "docs/html-head" . }}
+{{ partial "docs/inject/head" . }}
+<body>
+    <div id="all">
+        <header>{{ partial "nav.html" . }}</header>
+        {{ partial "breadcrumbs.html" . }}
+        <div id="content">
+            <div class="container docscontainer">
+                <input type="checkbox" style="display: none" id="menu-control" >
+                <div class="slide_nav" id="slideNav">
+                    <img src="/svg/menu.svg" alt="Menu">
+                    <p>{{ i18n "docs_nav_menu_name" }}</p>
+                </div>
+                <main class="flex container docscontainer">
+                <aside class="book-menu fixed" id="menu">{{ partial "docs/menu" . }}</aside>
+                <div class="book-page" id="page">
+                {{ template "main" . }}
+                {{ partial "docs/inject/footer" . }}
+                </div>
+                {{ template "toc" . }}
+                </main>
+                {{ partial "docs/inject/body" . }}
+                {{ template "_internal/google_analytics_async.html" . }}
+            </div>
+        </div>
+    </div>
+{{ partial "scripts.html" . }}
+</body>
+</html>

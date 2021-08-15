@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+{{ partial "head.html" . }}
+<link rel="stylesheet" href="./css/community.css?t=202000416">
+<body>
+    <div id="all">
+        <header>
+            {{ partial "nav.html" . }}
+        </header>
+        <div>
+            <div class="banner-bg" >
+                <a class="bannerRegister" href="" target="_blank"><img class="pc" src={{.Params.banner}} alt="Banner" ></a>
+                <a class="bannerRegister" href="" target="_blank"><img class="mobile" src={{.Params.bannerM}} alt="Banner"></a>
+            </div>
+        </div>
+        <div class="community-list container">
+            <div class="community-list-content">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                        <p class="list-title">{{.Params.step1}}</p>
+                        <div class="list-icon">
+                            <img src="./img/icon1.png" alt="">
+                        </div>
+                        <div class="list-line first-line"></div>
+                        <p class="list-time mobile-hide">{{.Params.date1InPC}}</p>
+                        <p class="list-time mobile-show">{{.Params.date1InMB}}</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                        <p class="list-title">{{.Params.step2}}</p>
+                        <div class="list-icon">
+                            <img src="./img/icon2.png" alt="">
+                        </div>
+                        <div class="list-line"></div>
+                        <p class="list-time mobile-hide">{{.Params.date2InPC}}</p>
+                        <p class="list-time mobile-show">{{.Params.date2InMB}}</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                        <p class="list-title">{{.Params.step3}}</p>
+                        <div class="list-icon">
+                            <img src="./img/icon3.png" alt="">
+                        </div>
+                        <div class="list-line"></div>
+                        <p class="list-time mobile-hide">{{.Params.date3InPC}}</p>
+                        <p class="list-time mobile-show">{{.Params.date3InMB}}</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                        <p class="list-title">{{.Params.step4}}</p>
+                        <div class="list-icon">
+                            <img src="./img/icon4.png" alt="">
+                        </div>
+                        <div class="list-line last-line"></div>
+                        <p class="list-time mobile-hide">{{.Params.date4InPC}}</p>
+                        <p class="list-time mobile-show">{{.Params.date4InMB}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="community-keynotes">
+            <p class="community-item-title speech">{{.Params.keynotes}}</p>
+            <!-- <p class="community-item-tip">Keynotes</p> -->
+            <div class="keynotes-list">
+                <div class="keynotes-list-item">
+                    <a href="javascript:">
+                        <div class="keynotes-item-simple">
+                            <span class="glyphicon glyphicon-time keynotes-item-time" aria-hidden="true"></span>
+                            <span class="keynotes-item-time">{{.Params.keyNoteTime}}</span>
+                            <span
+                                class="keynotes-item-time keynotes-item-speaker-right">{{.Params.keyNoteSpeaker}}</span>
+                            <div class="row">
+                                <p class="keynotes-item-content col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                                    {{.Params.keyNoteTitle}}
+                                </p>
+                                <span class="keynotes-item-time keynotes-item-speaker col-lg-2">{{.Params.keyNoteSpeaker}}</span>
+                                <p class="col-lg-12">
+                                    <a href="{{.Params.replayUrl}}" target="_blank" class="replay">{{ .Params.replay }}</a>
+                                    <!-- <a style = " padding-left: 50px;" href="{{.Params.slidesUrl}}" target="_blank" class="replay" download >{{ .Params.slides }}</a> -->
+                                </p>
+                            </div>
+                        </div>
+                        <div class="keynotes-item-detail clear">
+                            <div class="keynotes-info">
+                                <p class="keynotes-info-title mobile-hide">{{.Params.keyNoteInfo}}</p>
+                                <p class="keynotes-info-title mobile-show"> {{.Params.keyNoteTitle}}</p>
+                                <div class="keynotes-info-content">{{.Params.keyNoteInfoContent}}</div>
+                            </div>
+                            <div class="keynotes-speaker clear">
+                                <div class="keynotes-speaker-head"><img style="width:100%;"src='{{.Params.keyNoteSpeakerPicInPC}}'></div>
+                                <div class="keynotes-speaker-detail">
+                                    <p class="keynotes-speaker-name">{{.Params.keyNoteSpeaker}}</p>
+                                    <span class="keynotes-speaker-info">
+                                        {{.Params.keyNoteSpeakerIntro}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="keynotes-list-item">
+                    <a href="javascript:">
+                        <div class="keynotes-item-simple">
+                            <span class="glyphicon glyphicon-time keynotes-item-time" aria-hidden="true"></span>
+                            <span class="keynotes-item-time">{{.Params.keyNoteTime2}}</span>
+                            <span
+                                class="keynotes-item-time keynotes-item-speaker-right">{{.Params.keyNoteSpeaker2}}</span>
+                            <div class="row">
+                                <p class="keynotes-item-content col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                                    {{.Params.keyNoteTitle2}}</p>
+                                <span class="keynotes-item-time keynotes-item-speaker col-lg-2">{{.Params.keyNoteSpeaker2}}</span>
+                                <p class="col-lg-12">
+                                    <a href="{{.Params.replayUrl2}}" target="_blank" class="replay" >{{ .Params.replay }}</a>
+                                    <!-- <a style = " padding-left: 50px;" href="{{.Params.slidesUrl2}}" target="_blank" class="replay" download >{{ .Params.slides }}</a> -->
+                                </p>
+                            </div>
+                        </div>
+                        <div class="keynotes-item-detail clear">
+                            <div class="keynotes-info">
+                                <p class="keynotes-info-title mobile-hide">{{.Params.keyNoteInfo2}}</p>
+                                <p class="keynotes-info-title mobile-show"> {{.Params.keyNoteTitle2}}</p>
+                                <div class="keynotes-info-content">{{.Params.keyNoteInfoContent2}}</div>
+                            </div>
+                            <div class="keynotes-speaker clear">
+                                <div class="keynotes-speaker-head"><img style="width:100%;"src='{{.Params.keyNoteSpeakerPicInPC2}}'></div>
+                                <div class="keynotes-speaker-detail">
+                                    <p class="keynotes-speaker-name">{{.Params.keyNoteSpeaker2}}</p>
+                                    <span class="keynotes-speaker-info">
+                                        {{.Params.keyNoteSpeakerIntro2}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="keynotes-list-item">
+                    <a href="javascript:">
+                        <div class="keynotes-item-simple">
+                            <span class="glyphicon glyphicon-time keynotes-item-time" aria-hidden="true"></span>
+                            <span class="keynotes-item-time">{{.Params.keyNoteTime3}}</span>
+                            <span
+                                class="keynotes-item-time keynotes-item-speaker-right">{{.Params.keyNoteSpeaker3}}</span>
+                            <div class="row">
+                                <p class="keynotes-item-content col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                                    {{.Params.keyNoteTitle3}}</p>
+                                <span class="keynotes-item-time keynotes-item-speaker col-lg-2">{{.Params.keyNoteSpeaker3}}</span>
+                                <p class="col-lg-12">
+                                    <a href="{{.Params.replayUrl3}}" target="_blank" class="replay"  >{{ .Params.replay }}</a>
+                                    <!-- <a style = " padding-left: 50px;" href="{{.Params.slidesUrl3}}" target="_blank" class="replay" download >{{ .Params.slides }}</a> -->
+                                </p>
+                            </div>
+                        </div>
+                        <div class="keynotes-item-detail clear">
+                            <div class="keynotes-info">
+                                <p class="keynotes-info-title mobile-hide">{{.Params.keyNoteInfo3}}</p>
+                                <p class="keynotes-info-title mobile-show"> {{.Params.keyNoteTitle3}}</p>
+                                <div class="keynotes-info-content">{{.Params.keyNoteInfoContent3}}</div>
+                            </div>
+                            <div class="keynotes-speaker clear">
+                                <div class="keynotes-speaker-head"><img style="width:100%;"src='{{.Params.keyNoteSpeakerPicInPC3}}'></div>
+                                <div class="keynotes-speaker-detail">
+                                    <p class="keynotes-speaker-name">{{.Params.keyNoteSpeaker3}}</p>
+                                    <span class="keynotes-speaker-info">
+                                        {{.Params.keyNoteSpeakerIntro3}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="keynotes-list-item">
+                    <a href="javascript:">
+                        <div class="keynotes-item-simple">
+                            <span class="glyphicon glyphicon-time keynotes-item-time" aria-hidden="true"></span>
+                            <span class="keynotes-item-time">{{.Params.keyNoteTime4}}</span>
+                            <span
+                                class="keynotes-item-time keynotes-item-speaker-right">{{.Params.keyNoteSpeaker4}}</span>
+                            <div class="row">
+                                <p class="keynotes-item-content col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                                    {{.Params.keyNoteTitle4}}</p>
+                                <span  class="keynotes-item-time keynotes-item-speaker col-lg-2">{{.Params.keyNoteSpeaker4}}</span>
+                                <p class="col-lg-12">
+                                    <a href="{{.Params.replayUrl4}}" target="_blank" class="replay"  >{{ .Params.replay }}</a>
+                                    <!-- <a style = " padding-left: 50px;" href="{{.Params.slidesUrl4}}" target="_blank" class="replay" download >{{ .Params.slides }}</a> -->
+                                </p>
+                            </div>
+                        </div>
+                        <div class="keynotes-item-detail clear">
+                            <div class="keynotes-info">
+                                <p class="keynotes-info-title mobile-hide">{{.Params.keyNoteInfo4}}</p>
+                                <p class="keynotes-info-title mobile-show"> {{.Params.keyNoteTitle4}}</p>
+                                <div class="keynotes-info-content">{{.Params.keyNoteInfoContent4}}</div>
+                            </div>
+                            <div class="keynotes-speaker clear">
+                                <div class="keynotes-speaker-head"><img style="width:100%;"src='{{.Params.keyNoteSpeakerPicInPC4}}'></div>
+                                <div class="keynotes-speaker-detail">
+                                    <p class="keynotes-speaker-name">{{.Params.keyNoteSpeaker4}}</p>
+                                    <span class="keynotes-speaker-info">
+                                        {{.Params.keyNoteSpeakerIntro4}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="keynotes-list-item">
+                    <a href="javascript:">
+                        <div class="keynotes-item-simple">
+                            <span class="glyphicon glyphicon-time keynotes-item-time" aria-hidden="true"></span>
+                            <span class="keynotes-item-time">{{.Params.keyNoteTime5}}</span>
+                            <span
+                                class="keynotes-item-time keynotes-item-speaker-right">{{.Params.keyNoteSpeaker5}}</span>
+                            <div class="row">
+                                <p class="keynotes-item-content col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                                    {{.Params.keyNoteTitle5}}</p>
+                                <span class="keynotes-item-time keynotes-item-speaker col-lg-2">{{.Params.keyNoteSpeaker5}}</span>
+                                <p class="col-lg-12">
+                                    <a href="{{.Params.replayUrl5}}" target="_blank" class="replay"  >{{ .Params.replay }}</a>
+                                    <!-- <a style = " padding-left: 50px;" href="{{.Params.slidesUrl5}}" target="_blank" class="replay" download >{{ .Params.slides }}</a> -->
+                                </p>
+                            </div>
+                        </div>
+                        <div class="keynotes-item-detail clear">
+                            <div class="keynotes-info">
+                                <p class="keynotes-info-title mobile-hide">{{.Params.keyNoteInfo5}}</p>
+                                <p class="keynotes-info-title mobile-show"> {{.Params.keyNoteTitle5}}</p>
+                                <div class="keynotes-info-content">{{.Params.keyNoteInfoContent5}}</div>
+                            </div>
+                            <div class="keynotes-speaker clear">
+                                <div class="keynotes-speaker-head"><img style="width:100%;"src='{{.Params.keyNoteSpeakerPicInPC5}}'></div>
+                                <div class="keynotes-speaker-detail">
+                                    <p class="keynotes-speaker-name">{{.Params.keyNoteSpeaker5}}</p>
+                                    <span class="keynotes-speaker-info">
+                                        {{.Params.keyNoteSpeakerIntro5}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="keynotes-list-item">
+                    <a href="javascript:">
+                        <div class="keynotes-item-simple">
+                            <span class="glyphicon glyphicon-time keynotes-item-time" aria-hidden="true"></span>
+                            <span class="keynotes-item-time">{{.Params.keyNoteTime6}}</span>
+                            <span
+                                class="keynotes-item-time keynotes-item-speaker-right">{{.Params.keyNoteSpeaker6}}</span>
+                            <div class="row">
+                                <p class="keynotes-item-content col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                                    {{.Params.keyNoteTitle6}}</p>
+                                <span class="keynotes-item-time keynotes-item-speaker col-lg-2">{{.Params.keyNoteSpeaker6}}</span>
+                                <p class="col-lg-12">
+                                    <a href="{{.Params.replayUrl6}}" target="_blank" class="replay"  >{{ .Params.replay }}</a>
+                                    <!-- <a style = " padding-left: 50px;" href="{{.Params.slidesUrl6}}" target="_blank" class="replay" download >{{ .Params.slides }}</a> -->
+                                </p>
+                            </div>
+                        </div>
+                        <div class="keynotes-item-detail clear">
+                            <div class="keynotes-info">
+                                <p class="keynotes-info-title mobile-hide">{{.Params.keyNoteInfo6}}</p>
+                                <p class="keynotes-info-title mobile-show"> {{.Params.keyNoteTitle6}}</p>
+                                <div class="keynotes-info-content">{{.Params.keyNoteInfoContent6}}</div>
+                            </div>
+                            <div class="keynotes-speaker clear">
+                                <div class="keynotes-speaker-head"><img style="width:100%;"src='{{.Params.keyNoteSpeakerPicInPC6}}'></div>
+                                <div class="keynotes-speaker-detail">
+                                    <p class="keynotes-speaker-name">{{.Params.keyNoteSpeaker6}}</p>
+                                    <span class="keynotes-speaker-info">
+                                        {{.Params.keyNoteSpeakerIntro6}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="keynotes-list-item">
+                    <a href="javascript:">
+                        <div class="keynotes-item-simple">
+                            <span class="glyphicon glyphicon-time keynotes-item-time" aria-hidden="true"></span>
+                            <span class="keynotes-item-time">{{.Params.keyNoteTime7}}</span>
+                            <span
+                                class="keynotes-item-time keynotes-item-speaker-right">{{.Params.keyNoteSpeaker7}}</span>
+                            <div class="row">
+                                <p class="keynotes-item-content col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                                    {{.Params.keyNoteTitle7}}</p>
+                                <span  class="keynotes-item-time keynotes-item-speaker col-lg-2">{{.Params.keyNoteSpeaker7}}</span>
+                                <p class="col-lg-12">
+                                    <a href="{{.Params.replayUrl7}}" target="_blank" class="replay"  >{{ .Params.replay }}</a>
+                                    <!-- <a style = " padding-left: 50px;" href="{{.Params.slidesUrl7}}" target="_blank" class="replay" download >{{ .Params.slides }}</a> -->
+                                </p>
+                            </div>
+                        </div>
+                        <div class="keynotes-item-detail clear">
+                            <div class="keynotes-info">
+                                <p class="keynotes-info-title mobile-hide">{{.Params.keyNoteInfo7}}</p>
+                                <p class="keynotes-info-title mobile-show"> {{.Params.keyNoteTitle7}}</p>
+                                <div class="keynotes-info-content">{{.Params.keyNoteInfoContent7}}</div>
+                            </div>
+                            <div class="keynotes-speaker clear">
+                                <div class="keynotes-speaker-head"><img style="width:100%;"src='{{.Params.keyNoteSpeakerPicInPC7}}'></div>
+                                <div class="keynotes-speaker-detail">
+                                    <p class="keynotes-speaker-name">{{.Params.keyNoteSpeaker7}}</p>
+                                    <span class="keynotes-speaker-info">
+                                        {{.Params.keyNoteSpeakerIntro7}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="keynotes-list-item">
+                    <a href="javascript:">
+                        <div class="keynotes-item-simple">
+                            <span class="glyphicon glyphicon-time keynotes-item-time" aria-hidden="true"></span>
+                            <span class="keynotes-item-time">{{.Params.keyNoteTime8}}</span>
+                            <span
+                                class="keynotes-item-time keynotes-item-speaker-right">{{.Params.keyNoteSpeaker8}}</span>
+                            <div class="row">
+                                <p class="keynotes-item-content col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                                    {{.Params.keyNoteTitle8}}</p>
+                                <span class="keynotes-item-time keynotes-item-speaker col-lg-2">{{.Params.keyNoteSpeaker8}}</span>
+                                <p class="col-lg-12">
+                                    <a href="{{.Params.replayUrl8}}" target="_blank" class="replay"  >{{ .Params.replay }}</a>
+                                    <!-- <a style = " padding-left: 50px;" href="{{.Params.slidesUrl8}}" target="_blank" class="replay" download >{{ .Params.slides }}</a> -->
+                                </p>
+                            </div>
+                        </div>
+                        <div class="keynotes-item-detail clear">
+                            <div class="keynotes-info">
+                                <p class="keynotes-info-title mobile-hide">{{.Params.keyNoteInfo8}}</p>
+                                <p class="keynotes-info-title mobile-show"> {{.Params.keyNoteTitle8}}</p>
+                                <div class="keynotes-info-content">{{.Params.keyNoteInfoContent8}}</div>
+                            </div>
+                            <div class="keynotes-speaker clear">
+                                <div class="keynotes-speaker-head"><img style="width:100%;"src='{{.Params.keyNoteSpeakerPicInPC8}}'></div>
+                                <div class="keynotes-speaker-detail">
+                                    <p class="keynotes-speaker-name">{{.Params.keyNoteSpeaker8}}</p>
+                                    <span class="keynotes-speaker-info">
+                                        {{.Params.keyNoteSpeakerIntro8}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="keynotes-list-item">
+                    <a href="javascript:">
+                        <div class="keynotes-item-simple">
+                            <span class="glyphicon glyphicon-time keynotes-item-time" aria-hidden="true"></span>
+                            <span class="keynotes-item-time">{{.Params.keyNoteTime9}}</span>
+                            <span
+                                class="keynotes-item-time keynotes-item-speaker-right">{{.Params.keyNoteSpeaker9}}</span>
+                            <div class="row">
+                                <p class="keynotes-item-content col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                                    {{.Params.keyNoteTitle9}}</p>
+                                <span class="keynotes-item-time keynotes-item-speaker col-lg-2">{{.Params.keyNoteSpeaker9}}</span>
+                                <p class="col-lg-12">
+                                    <a href="{{.Params.replayUrl9}}" target="_blank" class="replay" >{{ .Params.replay }}</a>
+                                    <!-- <a style = " padding-left: 50px;" href="{{.Params.slidesUrl9}}" target="_blank" class="replay" download >{{ .Params.slides }}</a> -->
+                                </p>
+                            </div>
+                        </div>
+                        <div class="keynotes-item-detail clear">
+                            <div class="keynotes-info">
+                                <p class="keynotes-info-title mobile-hide">{{.Params.keyNoteInfo9}}</p>
+                                <p class="keynotes-info-title mobile-show"> {{.Params.keyNoteTitle9}}</p>
+                                <div class="keynotes-info-content">{{.Params.keyNoteInfoContent9}}</div>
+                            </div>
+                            <div class="keynotes-speaker clear">
+                                <div class="keynotes-speaker-head"><img style="width:100%;"src='{{.Params.keyNoteSpeakerPicInPC9}}'></div>
+                                <div class="keynotes-speaker-detail">
+                                    <p class="keynotes-speaker-name">{{.Params.keyNoteSpeaker9}}</p>
+                                    <span class="keynotes-speaker-info">
+                                        {{.Params.keyNoteSpeakerIntro9}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="community-summit">
+            <p class="community-item-title summit-design">
+                <span >{{.Params.DesignSummit1}}</span>
+                <span>{{.Params.DesignSummit2}}</span>
+            </p>
+            <div class="summit first-summit">
+                <div class="container">
+                    <div class="row mobile-hide">
+                        <div class="row" style="text-align: center;">
+                            <div class="col-lg-2"></div>
+                            <div class="col-lg-10">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <p class="summit-title-text">{{.Params.roomName1}}</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <p class="summit-title-text">{{.Params.roomName2}}</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <p class="summit-title-text">{{.Params.roomName3}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- <div class="col-lg-2">
+                                <p class="summit-title-text">{{.Params.period4}}</p>
+                            </div>
+                            <div class="col-lg-2">
+                                <p class="summit-title-text">{{.Params.period5}}</p>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="row mobile-show">
+                        <div class="col-md-4 col-sm-4 col-xs-4">{{.Params.roomName1}}</div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">{{.Params.roomName2}}</div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">{{.Params.roomName3}}</div>
+                    </div>
+                    <div class="row mobile-hide">
+                        <div class="row">
+                            <div class="summit-row-first summit-row-first-room col-lg-2" >
+                                <p class="summit-title-text summit-title-text-month">{{.Params.date1}}</p>
+                                <p class="summit-title-text">{{.Params.period1}}</p>
+                            </div>
+                            <div class="col-lg-10">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room1Period1Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.period1}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room1Period1GroupName}}</p>
+                                                <p>{{.Params.room1Period1ChairName}}</p>
+                                                <p>{{.Params.room1Period1ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room1Period2MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room1Period1ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room1Period1MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room2Period1Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.period1}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room2Period1GroupName}}</p>
+                                                <p>{{.Params.room2Period1ChairName}}</p>
+                                                <p>{{.Params.room2Period1ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>    
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room2Period1MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room2Period1ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room2Period1MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room3Period1Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.period1}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room3Period1GroupName}}</p>
+                                                <p>{{.Params.room3Period1ChairName}}</p>
+                                                <p>{{.Params.room3Period1ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room1Period2MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room3Period1ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room3Period1MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="summit-row-first summit-row-first-room col-lg-2" >
+                                <p class="summit-title-text summit-title-text-month">{{.Params.date1}}</p>
+                                <p class="summit-title-text ">{{.Params.Period2}}</p>
+                            </div>
+                            <div class="col-lg-10">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room1Period2Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.Period2}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room1Period2GroupName}}</p>
+                                                <p>{{.Params.room1Period2ChairName}}</p>
+                                                <p>{{.Params.room1Period2ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room1Period2MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room1Period2ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room1Period2MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room2Period2Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.Period2}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room2Period2GroupName}}</p>
+                                                <p>{{.Params.room2Period2ChairName}}</p>
+                                                <p>{{.Params.room2Period2ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room2Period2MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room2Period2ReplayUrl}}'>{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room2Period2MeetingLink}}'>{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room3Period2Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.Period2}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room3Period2GroupName}}</p>
+                                                <p>{{.Params.room3Period2ChairName}}</p>
+                                                <p>{{.Params.room3Period2ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>                                               
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room3Period2MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room3Period2ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room3Period2MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="summit-row-first summit-row-first-room col-lg-2" >
+                                <p class="summit-title-text summit-title-text-month">{{.Params.date1}}</p>
+                                <p class="summit-title-text ">{{.Params.Period3}}</p>
+                            </div>
+                            <div class="col-lg-10">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room1Period3Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.Period3}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room1Period3GroupName}}</p>
+                                                <p>{{.Params.room1Period3ChairName}}</p>
+                                                <p>{{.Params.room1Period3ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room1Period3MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room1Period3ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room1Period3MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        {{ if .Params.room2Period3Kernel}}
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room2Period3Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.Period3}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room2Period3GroupName}}</p>
+                                                <p>{{.Params.room2Period3ChairName}}</p>
+                                                <p>{{.Params.room2Period3ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room2Period3MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room2Period3ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room2Period3MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                        </div>
+                                        {{ end }}
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room3Period3Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.Period3}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room3Period3GroupName}}</p>
+                                                <p>{{.Params.room3Period3ChairName}}</p>
+                                                <p>{{.Params.room3Period3ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>    
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room3Period3MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room3Period3ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room3Period3MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="summit-row-first summit-row-first-room col-lg-2" >
+                                <p class="summit-title-text summit-title-text-month">{{.Params.date1}}</p>
+                                <p class="summit-title-text ">{{.Params.Period4}}</p>
+                            </div>
+                            <div class="col-lg-10">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room1Period4Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.Period4}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room1Period4GroupName}}</p>
+                                                <p>{{.Params.room1Period4ChairName}}</p>
+                                                <p>{{.Params.room1Period4ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room1Period4MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room1Period4ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room1Period4MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room2Period4Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.Period4}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room2Period4GroupName}}</p>
+                                                <p>{{.Params.room2Period4ChairName}}</p>
+                                                <p>{{.Params.room2Period4ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room2Period4MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room2Period4ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room2Period4MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room3Period4Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.Period4}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room3Period4GroupName}}</p>
+                                                <p>{{.Params.room3Period4ChairName}}</p>
+                                                <p>{{.Params.room3Period4ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room3Period4MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room3Period4ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room3Period4MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="summit-row-first summit-row-first-room col-lg-2" >
+                                <p class="summit-title-text summit-title-text-month">{{.Params.date2}}</p>
+                                <p class="summit-title-text ">{{.Params.Period5}}</p>
+                            </div>
+                            <div class="col-lg-10">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room1Period5Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.Period5}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room1Period5GroupName}}</p>
+                                                <p>{{.Params.room1Period5ChairName}}</p>
+                                                <p>{{.Params.room1Period5ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room1Period5MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room1Period5ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room1Period5MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room2Period5Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.Period5}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room2Period5GroupName}}</p>
+                                                <p>{{.Params.room2Period5ChairName}}</p>
+                                                <p>{{.Params.room2Period5ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room2Period5MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room2Period5ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room2Period5MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        {{ if .Params.room3Period5Kernel}}
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room3Period5Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.Period5}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room3Period5GroupName}}</p>
+                                                <p>{{.Params.room3Period5ChairName}}</p>
+                                                <p>{{.Params.room3Period5ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room3Period5MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room3Period5ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room3Period5MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                        </div>
+                                        {{ end }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="summit-row-first summit-row-first-room col-lg-2" >
+                                <p class="summit-title-text summit-title-text-month">{{.Params.date2}}</p>
+                                <p class="summit-title-text ">{{.Params.Period6}}</p>
+                            </div>
+                            <div class="col-lg-10">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room1Period6Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.Period6}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room1Period6GroupName}}</p>
+                                                <p>{{.Params.room1Period6ChairName}}</p>
+                                                <p>{{.Params.room1Period6ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room1Period6MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room1Period6ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room1Period6MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room2Period6Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.Period6}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room2Period6GroupName}}</p>
+                                                <p>{{.Params.room2Period6ChairName}}</p>
+                                                <p>{{.Params.room2Period6ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room2Period6MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room2Period6ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room2Period6MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room3Period6Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.Period6}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room3Period6GroupName}}</p>
+                                                <p>{{.Params.room3Period6ChairName}}</p>
+                                                <p>{{.Params.room3Period6ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room3Period6MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room3Period6ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room3Period6MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="summit-row-first summit-row-first-room col-lg-2" >
+                                <p class="summit-title-text summit-title-text-month">{{.Params.date2}}</p>
+                                <p class="summit-title-text ">{{.Params.Period7}}</p>
+                            </div>
+                            <div class="col-lg-10">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room1Period7Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.Period7}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room1Period7GroupName}}</p>
+                                                <p>{{.Params.room1Period7ChairName}}</p>
+                                                <p>{{.Params.room1Period7ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room1Period7MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room1Period7ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room1Period7MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room2Period7Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.Period7}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room2Period7GroupName}}</p>
+                                                <p>{{.Params.room2Period7ChairName}}</p>
+                                                <p>{{.Params.room2Period7ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room2Period7MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room2Period7ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room2Period7MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="summit-room-item">
+                                            <p class="summit-room-item-title">{{.Params.room3Period7Kernel}}</p>
+                                            <span class="summit-room-item-time">{{.Params.Period7}}</span>
+                                            <div class="summit-room-item-name">
+                                                <p>{{.Params.room3Period7GroupName}}</p>
+                                                <p>{{.Params.room3Period7ChairName}}</p>
+                                                <p>{{.Params.room3Period7ChairIntroduction}}</p>
+                                                <p calss="community-summit-replay">
+                                                </p>
+                                            </div>
+                                            <div class="summit-room-item-info">
+                                                <p>{{.Params.room3Period7MeetingInfo}}</p>
+                                            </div>
+                                            <div class="summit-room-item-hover">
+                                                <a href='{{.Params.room3Period7ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                                <a href='{{.Params.room3Period7MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mobile-show">
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room1Period1Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date1}}</span>
+                                <span class="summit-room-item-time">{{.Params.period1}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room1Period1GroupName}}</p>
+                                    <p>{{.Params.room1Period1ChairName}}</p>
+                                    <p>{{.Params.room1Period1ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room1Period1MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room1Period1ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room1Period1MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room1Period2Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date1}}</span>
+                                <span class="summit-room-item-time">{{.Params.period2}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room1Period2GroupName}}</p>
+                                    <p>{{.Params.room1Period2ChairName}}</p>
+                                    <p>{{.Params.room1Period2ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room1Period2MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room1Period2ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room1Period2MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room1Period3Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date1}}</span>
+                                <span class="summit-room-item-time">{{.Params.period3}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room1Period3GroupName}}</p>
+                                    <p>{{.Params.room1Period3ChairName}}</p>
+                                    <p>{{.Params.room1Period3ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room1Period3MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room1Period3ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room1Period3MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room1Period4Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date1}}</span>
+                                <span class="summit-room-item-time">{{.Params.period4}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room1Period4GroupName}}</p>
+                                    <p>{{.Params.room1Period4ChairName}}</p>
+                                    <p>{{.Params.room1Period4ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room1Period4MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room1Period4ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room1Period4MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room1Period5Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date2}}</span>
+                                <span class="summit-room-item-time">{{.Params.period5}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room1Period5GroupName}}</p>
+                                    <p>{{.Params.room1Period5ChairName}}</p>
+                                    <p>{{.Params.room1Period5ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room1Period5MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room1Period5ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room1Period5MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room1Period6Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date2}}</span>
+                                <span class="summit-room-item-time">{{.Params.Period6}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room1Period6GroupName}}</p>
+                                    <p>{{.Params.room1Period6ChairName}}</p>
+                                    <p>{{.Params.room1Period6ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room1Period6MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room1Period6ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room1Period6MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room1Period7Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date2}}</span>
+                                <span class="summit-room-item-time">{{.Params.Period7}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room1Period7GroupName}}</p>
+                                    <p>{{.Params.room1Period7ChairName}}</p>
+                                    <p>{{.Params.room1Period7ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room1Period7MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room1Period7ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room1Period7MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room2Period1Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date1}}</span>
+                                <span class="summit-room-item-time">{{.Params.period1}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room2Period1GroupName}}</p>
+                                    <p>{{.Params.room2Period1ChairName}}</p>
+                                    <p>{{.Params.room2Period1ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room2Period1MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room2Period1ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room2Period1MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room2Period2Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date1}}</span>
+                                <span class="summit-room-item-time">{{.Params.period2}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room2Period2GroupName}}</p>
+                                    <p>{{.Params.room2Period2ChairName}}</p>
+                                    <p>{{.Params.room2Period2ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room2Period2MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room2Period2ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room2Period2MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                            {{ if .Params.room2Period3Kernel}}
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room2Period3Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date1}}</span>
+                                <span class="summit-room-item-time">{{.Params.period3}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room2Period3GroupName}}</p>
+                                    <p>{{.Params.room2Period3ChairName}}</p>
+                                    <p>{{.Params.room2Period3ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room2Period3MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room2Period3ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room2Period3MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                            {{ else }}
+                            <div class="summit-room-item-noBackground"></div>
+                            {{ end }}
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room2Period4Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date1}}</span>
+                                <span class="summit-room-item-time">{{.Params.period4}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room2Period4GroupName}}</p>
+                                    <p>{{.Params.room2Period4ChairName}}</p>
+                                    <p>{{.Params.room2Period4ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room2Period4MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room2Period4ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room2Period4MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room2Period5Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date2}}</span>
+                                <span class="summit-room-item-time">{{.Params.period5}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room2Period5GroupName}}</p>
+                                    <p>{{.Params.room2Period5ChairName}}</p>
+                                    <p>{{.Params.room2Period5ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room2Period5MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room2Period5ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room2Period5MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room2Period6Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date2}}</span>
+                                <span class="summit-room-item-time">{{.Params.Period6}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room2Period6GroupName}}</p>
+                                    <p>{{.Params.room2Period6ChairName}}</p>
+                                    <p>{{.Params.room2Period6ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room2Period6MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room2Period6ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room2Period6MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room2Period7Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date2}}</span>
+                                <span class="summit-room-item-time">{{.Params.Period7}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room2Period7GroupName}}</p>
+                                    <p>{{.Params.room2Period7ChairName}}</p>
+                                    <p>{{.Params.room2Period7ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room2Period7MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room2Period7ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room2Period7MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room3Period1Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date1}}</span>
+                                <span class="summit-room-item-time">{{.Params.period1}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room3Period1GroupName}}</p>
+                                    <p>{{.Params.room3Period1ChairName}}</p>
+                                    <p>{{.Params.room3Period1ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room3Period1MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room3Period1ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room3Period1MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room3Period2Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date1}}</span>
+                                <span class="summit-room-item-time">{{.Params.period2}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room3Period2GroupName}}</p>
+                                    <p>{{.Params.room3Period2ChairName}}</p>
+                                    <p>{{.Params.room3Period2ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room3Period2MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room3Period2ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room3Period2MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room3Period3Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date1}}</span>
+                                <span class="summit-room-item-time">{{.Params.period3}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room3Period3GroupName}}</p>
+                                    <p>{{.Params.room3Period3ChairName}}</p>
+                                    <p>{{.Params.room3Period3ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room3Period3MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room3Period3ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room3Period3MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room3Period4Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date1}}</span>
+                                <span class="summit-room-item-time">{{.Params.period4}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room3Period4GroupName}}</p>
+                                    <p>{{.Params.room3Period4ChairName}}</p>
+                                    <p>{{.Params.room3Period4ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room3Period4MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room3Period4ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room3Period4MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                            {{ if .Params.room3Period5Kernel}}
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room3Period5Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date2}}</span>
+                                <span class="summit-room-item-time">{{.Params.period5}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room3Period5GroupName}}</p>
+                                    <p>{{.Params.room3Period5ChairName}}</p>
+                                    <p>{{.Params.room3Period5ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room3Period5MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room3Period5ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room3Period5MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                            {{ else }}
+                            <div class="summit-room-item-noBackground"></div>
+                            {{ end }}
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room3Period6Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date2}}</span>
+                                <span class="summit-room-item-time">{{.Params.Period6}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room3Period6GroupName}}</p>
+                                    <p>{{.Params.room3Period6ChairName}}</p>
+                                    <p>{{.Params.room3Period6ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room3Period6MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room3Period6ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room3Period6MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                            <div class="summit-room-item">
+                                <p class="summit-room-item-title">{{.Params.room3Period7Kernel}}</p>
+                                <span class="summit-room-item-date">{{.Params.date2}}</span>
+                                <span class="summit-room-item-time">{{.Params.Period7}}</span>
+                                <div class="summit-room-item-name">
+                                    <p>{{.Params.room3Period7GroupName}}</p>
+                                    <p>{{.Params.room3Period7ChairName}}</p>
+                                    <p>{{.Params.room3Period7ChairIntroduction}}</p>
+                                </div>
+                                <div class="summit-room-item-info">
+                                    <p>{{.Params.room3Period7MeetingInfo}}</p>
+                                </div>
+                                <div class="summit-room-item-hover">
+                                    <a href='{{.Params.room3Period7ReplayUrl}}' target="_blank">{{.Params.room1Period1Replay}}</a>
+                                    <a href='{{.Params.room3Period7MeetingLink}}' target="_blank">{{.Params.room1Period1Slides}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="community-parters">
+            <p class="community-item-title parters-link">{{.Params.Partners}}</p>
+            <!-- <p class="community-item-tip">Our Partners</p> -->
+            <div class="container community-parters-item">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="{{.Params.mulanLink}}">
+                             <img class="pc" src={{.Params.logo1}} alt="">
+                             <img class="mobile" src={{.Params.logo1Mobile}} alt="">
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="{{.Params.kunPengLink}}" target="_blank">
+                             <img class="pc" src="{{ .Params.logo2}}" alt="">
+                             <img class="mobile" src={{.Params.logo2Mobile}} alt="">
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="{{.Params.pengChengLink}}" target="_blank">
+                             <img class="pc" src={{.Params.logo3}} alt="">
+                             <img class="mobile" src={{.Params.logo3Mobile}} alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{$lan := index (split .URL "/") 1 }}
+        {{$faqPath :=  (print "/" $lan "/summitfaq/docsfaq/answer1.html") }}        
+        <div id="FAQ">
+            <a href={{$faqPath}}>
+                <img src="./img/service.png" alt="">
+                <span>FAQ</span>
+            </a>
+        </div>
+        {{ partial "footer.html" . }}
+    </div>
+    {{ partial "scripts.html" . }}
+    <script src="./js/community.js"></script>
+    <!--涉及对HUGO框架变量的引用，需要把Js写在single.html,不然会有问题。故以下代码不提取到Js文件-->
+    <script>
+        var traceData = window.location.search;
+        traceData = traceData.split('?')[1];
+        var registerUrl;
+        if(traceData){
+            registerUrl='{{.Params.registerUrlAtBanner}}' + traceData;
+        }else{
+            registerUrl='{{.Params.registerUrlAtBanner}}'
+        }
+        $('.bannerRegister').attr('href',registerUrl);
+    </script>
+</body>
+</html>

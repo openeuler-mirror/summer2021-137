@@ -1,0 +1,723 @@
+@media screen and (min-width: 319px) and (max-width: 767px) {
+  .isPc {
+    display: none;
+  }
+  .isH5 {
+    display: block;
+  }
+  header {
+    padding: 0 0.4rem;
+    position: relative;
+    border-bottom: 1px solid #ECECEC;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* height: 0.8rem; */
+  }
+  .nav_table{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  header .topbar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    list-style-type: none;
+    /* padding: 15px 0px; */
+  }
+
+  header .topbar li {
+    height: 50px;
+  }
+
+  header .topbar .search {
+    white-space: nowrap;
+  }
+
+  header .topbar .search a.list,
+  header .topbar .search a.list:hover,
+  header .topbar .search a.list:active {
+    color:inherit;
+    text-decoration: none;
+    padding: 15px 10px;
+  }
+
+  header .navbar-brand {
+    padding: 5px 0;
+    height: auto;
+  }
+
+  header .navbar-brand>img {
+    width: 80%;
+  }
+
+  header h2 {
+    font-size: 0.4rem;
+    margin: 0;
+  }
+  header ul li {
+    padding: 0 0.1rem;
+    font-size: 0.28rem;
+  }
+  header ul li.search {
+    display: flex;
+    /* margin-right: .2rem; */
+  }
+  header ul li img {
+    width: 16px;
+  }
+  header #nav {
+    position: absolute;
+    top: 51px;
+    left: 0;
+    width: 100%;
+    display: none;
+    background: #fff;
+    color: #333;
+    z-index: 1000;
+    padding: 0 .3rem;
+    box-shadow: 0 5px 10px 0 #D3D3D3;
+  }
+  header #nav p {
+    line-height: .52rem;
+    padding: .14rem 0;
+    font-size: .26rem;
+    border-bottom: 1px solid #ECECEC;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  header #nav p:not(:last-child) {
+    border-bottom: 1px solid #ECECEC;
+  }
+  header #nav .second_menu {
+    position: relative;
+  }
+  header #nav .second_menu i {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-top: 5px solid #000;
+    border-right: 5px solid transparent;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, 0px);
+  }
+  header #nav .menu_list {
+    display: none;
+  }
+  header #nav .menu_list p {
+    padding: 0.14rem .3rem;
+  }
+  header #nav a.list,
+  header #nav a.list:hover,
+  header #nav a.list:active {
+    color:inherit;
+    text-decoration: none;
+    border-bottom: 1px solid #ECECEC;
+  }
+  .bannernew {
+    height: 280px;
+  }
+  .bannernew .content {
+    padding: .5rem .2rem;
+  }
+  .bannernew .content h2 {
+    font-size: 0.48rem;
+    font-family: "HuaweiSansBold";
+    text-align: center;
+  }
+  .bannernew .content p {
+    width: auto;
+    font-size: .24rem;
+    line-height: .36rem;
+    margin: .35rem auto 0;
+  }
+
+  .item.active img.mobile{
+    display: block;
+}
+  .item.active img.pc{
+    display: none;
+}
+
+  .bannernew .cards {
+    width: 90%;
+    position: static;
+    transform: translate(0, 0);
+    margin: 0 auto;
+    padding: 0px;
+  }
+  .bannernew .cards ul {
+    flex-wrap: wrap;
+  }
+  .bannernew .cards ul li {
+    width: 100%;
+    padding: .3rem;
+  }
+  .bannernew .cards ul a {
+    width: 50%;
+  }
+
+  .bannernew .cards ul li .icon {
+    transform: scale(.7);
+  }
+
+  .bannernew .cards ul a:nth-child(1) {
+    border-bottom: 1px solid #E3E9EB;
+  }
+  .bannernew .cards ul a:nth-child(2) {
+    border-bottom: 1px solid #E3E9EB;
+  }
+  .bannernew .cards ul a:nth-child(2n) {
+    border-right: 0;
+  }
+  .bannernew .cards ul a:nth-child(2n+1) {
+    border-right: 1px solid #E3E9EB;
+  }
+  .bannernew .cards ul li h3 {
+    font-size: .28rem;
+    margin: .3rem 0 .28rem;
+  }
+  .bannernew .cards ul li p {
+    font-size: .24rem;
+    line-height: .36rem;
+    padding: 0px;
+  }
+  .bannernew .cards ul li img {
+    height: 30px;
+  }
+
+
+/* doc_nav */
+#heading-breadcrumbs{
+  margin-bottom: 20px;
+}
+.container.docscontainer {
+  position: relative;
+  padding: 0;
+}
+.slide_nav {
+  display: flex !important;
+  align-items: center;
+  padding: 10px 15px 5px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #b5b5b5;
+}
+.slide_nav p {
+  margin: 0;
+}
+
+.book-menu {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  background: #fff;
+  top: 0;
+  left: 0;
+  padding: 0 15px;
+  transition: .3s;
+  transform: translateX(-100%);
+}
+
+.container div.book-page {
+  margin-left: 0;
+  padding: 0 15px;
+}
+
+  .reason {
+    padding: 6.7rem .6rem .6rem;
+  }
+  .reason h2 {
+    font-size: 0.46rem;
+    margin-bottom: .38rem;
+  }
+  .reason .content_why {
+    flex-direction: column;
+  }
+  
+  .reason .content_why .detail {
+    margin-left: 0;
+  }
+  .reason .content_why .detail p {
+    font-size: .28rem;
+    line-height: .52rem;
+  }
+  .reason .content_why .detail p:nth-child(1) {
+    margin-bottom: .2rem;
+  }
+
+  .publisher h2{
+    font-size: 22px;
+  }
+
+  .publisher .imgDivLeft{
+    text-align: center;
+    padding-right:0px;
+  }
+  
+  .publisher .imgDivRight{
+    margin-top:20px;
+    text-align: center;
+    padding-left:10px;
+  }
+  .publisher img{
+    height:50px;
+  }
+ .friendsLink h2{
+  font-size: 22px;
+ }
+  .action {
+    padding: .6rem;
+  }
+  .action .active_box {
+    display: inline;
+  }
+  .action .active_box .active {
+    width: 100%;
+    margin-right: 0 !important;
+  }
+  .action .active_box .active:last-child {
+    margin-top: .8rem;
+  }
+  .action .active_box .active h2 {
+    font-size: 0.46rem;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #b5b5b5;
+  }
+  .action .active_box .active h2 p {
+    line-height: inherit;
+    position: absolute;
+    right: 0;
+    bottom: 24px;
+    font-size: .24rem;
+    font-weight: 100;
+  }
+  .action .active_box .active ul li {
+    padding: .26rem .1rem .3rem;
+    border-bottom: 1px solid rgba(181, 181, 181, 0.5);
+  }
+  /*.action .active_box .active ul li:not(:last-child) {
+    border-bottom: 1px solid rgba(181, 181, 181, 0.5);
+  }
+  .action .active_box .active ul li:last-child {
+    border-bottom: 0px;
+  }*/
+  .action .active_box .active ul li h6 {
+    font-size: .28rem;
+  }
+  .action .active_box .active ul li h6 i {
+    font-size: .22rem;
+  }
+  .action .active_box .active ul li p {
+    font-size: .24rem;
+    line-height: .4REM;
+  }
+  .partners {
+    padding: 0 0 .8rem 0;
+  }
+  .partners h2 {
+    font-size: 0.46rem;
+    margin-bottom: .4rem;
+  }
+  .partners .box {
+    width: 85%;
+    flex-wrap: wrap;
+  }
+  .partners .box img {
+    width: 25%;
+  }
+  .partners .box img:nth-child(2) {
+    width: 4.5rem;
+  }
+  .emailAndApply{
+    background:none;
+    padding:0;
+  }
+  .emailAndApplyBox{
+    display: inline;
+  }
+
+  
+  .emailAndApplyBoxL2{
+    width:100%;
+    margin-right: 0 !important;
+    background: url('../img/bannernew.jpg') no-repeat;
+  }
+
+  .emailAndApplyBoxL3{
+    width:100%;
+    margin-right: 0 !important;
+    background: url('../img/3.jpg') no-repeat;
+  }
+
+  .emailAndApplyBoxL2 {
+    text-align:center;
+    justify-content: space-around;
+    padding: .4rem 0;
+    background-position: top;
+  }
+  .emailAndApplyBoxL2 h2 {
+   
+    font-size: 0.46rem;
+    margin-bottom: 0;
+  }
+  .emailAndApplyBoxL2 ul {
+    width: auto;
+    padding: 0px;
+  }
+
+  .emailAndApplyBoxL2 ul li {
+    justify-content: space-around;
+  }
+
+  .emailAndApplyBoxL2 ul li:last-child {
+    margin-bottom: 0;
+  }
+  .emailAndApplyBoxL2 ul li h3 {
+    font-size: .38rem;
+    line-height: .44rem;
+  }
+  .emailAndApplyBoxL2 ul li p {
+    font-size: .24rem;
+    margin-top: 0;
+    padding-right: 0;
+  }
+  .emailAndApplyBoxL2 ul li .btn {
+    padding: .1rem .15rem;
+    font-size: .26rem;
+    font-family: "HuaweiSansBold";
+  }
+
+  .emailAndApplyBoxL2 ul li > div {
+    width: 60%;
+  }
+
+  .container .heading {
+    margin: 0;
+  }
+
+  .container .client-header h2 {
+    font-size: .46rem;
+    font-weight: 600;
+  }
+
+  .container p.lead {
+    margin: 0;
+  }
+
+  .container .owl-carousel.customers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: .4rem;
+  }
+
+  .container .owl-carousel.customers .item {
+    margin: 0;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container .owl-carousel.customers .item img {
+    transform: scale(.75);
+  }
+
+  .divmail ul li a {
+    margin: 0px;
+  }
+
+  .main .down_banner {
+    padding: .3rem .4rem;
+    height: auto;
+  }
+  .main .down_banner p {
+    margin: 0;
+    font-size: .3rem;
+    font-family: "HuaweiSansBold";
+  }
+  .main .content {
+    padding: 0 .4rem;
+    flex-direction: column-reverse;
+  }
+  .main .content .search_v {
+    width: auto;
+    padding-top: .3rem;
+  }
+  .main .content .search_v li .vision {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main .content .search_v li .vision p {
+    width: 20%;
+    margin-bottom: 0;
+  }
+  .main .content .nav {
+    margin-right: 0;
+  }
+  .main .content .nav li {
+    padding: .3rem 0;
+  }
+  .main .content .nav li h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .main .content .nav li h3 span.title {
+    font-size: .4rem;
+    font-weight: 700;
+  }
+  .main .content .nav li h4 {
+    font-size: .28rem;
+  }
+  .main .content .nav li p {
+    font-size: .24rem;
+  }
+
+  #FAQ{
+    display:none
+  }
+
+  footer {
+    padding: .4rem .6rem;
+  }
+  footer .foot {
+    display: block;
+  }
+  footer .foot.isPc {
+    display: none;
+  }
+  footer .foot .contact {
+    text-align: center;
+  }
+  footer .foot .contact h2 {
+    font-size: 0.46rem;
+    margin-bottom: 0;
+  }
+  footer .foot .contact p {
+    font-size: .24rem;
+    margin: 0 auto;
+  }
+  footer .foot .contact svg {
+    width: 12px;
+  }
+  footer .qr-code {
+    margin-top: 20px;
+  }
+  footer .foot .notice {
+    width: auto;
+  }
+  #mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+  }
+
+  .table-bordered.table-striped td:last-child {
+    white-space:nowrap;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .isPc {
+    display: none;
+  }
+  header {
+    padding: 0 .6rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  header .topbar {
+    display: flex;
+    align-items: center;
+    margin: 0 595px;
+    list-style-type: none;
+    padding: 20px 0;
+  }
+  header .topbar .search {
+    white-space: nowrap;
+  }
+  header .topbar .search a.list,
+  header .topbar .search a.list:hover,
+  header .topbar .search a.list:active {
+    color:inherit;
+    text-decoration: none;
+    padding: 0 10px;
+  }
+  header .navbar-brand {
+    padding: 5px 15px;
+  }
+  header h2 {
+    font-size: 0.38rem;
+    margin: 0px;
+  }
+  header ul li {
+    padding: 0 0.1rem;
+    font-size: 0.28rem;
+    display: flex;
+  }
+  header ul li img {
+    width: 18px;
+  }
+  header #nav {
+    position: absolute;
+    top: 62px;
+    left: 0;
+    width: 100%;
+    display: none;
+    background: #fff;
+    color: #333;
+    z-index: 100;
+    padding: 0 .6rem;
+    box-shadow: 0 5px 10px 0 #D3D3D3;
+  }
+  header #nav p {
+    line-height: .52rem;
+    padding: .14rem 0;
+    font-size: .28rem;
+    border-bottom: 1px solid #ECECEC;
+    text-transform: uppercase;
+  }
+  header #nav p:not(:last-child) {
+    border-bottom: 1px solid #ECECEC;
+  }
+  header #nav .second_menu {
+    position: relative;
+  }
+  header #nav .second_menu i {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-top: 5px solid #000;
+    border-right: 5px solid transparent;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, 0px);
+  }
+  header #nav .menu_list {
+    display: none;
+  }
+  header #nav .menu_list p {
+    padding: 0.14rem .3rem;
+  }
+  header #nav a.list,
+  header #nav a.list:hover,
+  header #nav a.list:active 
+  {
+    color:inherit;
+    text-decoration: none;
+  }
+  .bannernew .content {
+    padding: 1.8rem .4rem;
+  }
+  .bannernew .content h2 {
+    font-size: 0.6rem;
+    text-align: center;
+  }
+  .bannernew .content p {
+    width: auto;
+  }
+  .bannernew .cards {
+    bottom: -35%;
+    padding: 0px;
+  }
+  .bannernew .cards ul li p {
+    padding: .18rem;
+  }
+  .reason {
+    padding: 245px 30px 70px;
+  }
+  .reason .content_why {
+    flex-direction: column;
+  }
+  .reason .content_why .detail {
+    margin-left: 0;
+    width: 580px;
+  }
+  .action .active_box .active h2 {
+    font-size: 0.45rem;
+  }
+  .action .active_box .active h2 p {
+    line-height: inherit;
+  }
+  .partners {
+    padding: 0 0 70px 0;
+  }
+  .container .heading {
+    margin: 0;
+  }
+  .owl-carousel.customers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .owl-carousel.customers .item {
+    width: 25%;
+    margin: 25px 0 0 30px;
+  }
+
+  .e_mail ul {
+    width: auto;
+    padding: 0px;
+  }
+  .e_mail ul li {
+    justify-content: space-around;
+  }
+  .e_mail ul li > div {
+    width: 55%;
+  }
+  .e_mail ul li .btn {
+    margin-left: 20px;
+  }
+  .content {
+    padding: 0 20px;
+  }
+  .main .down_banner {
+    padding: .3rem .4rem;
+    height: auto;
+  }
+  .main .down_banner p {
+    margin: 0;
+    font-size: .5rem;
+    font-family: "HuaweiSansBold";
+  }
+  footer {
+    padding: 20px 30px 20px;
+  }
+  footer .notice {
+    width: 360px;
+  }
+  #mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+  }
+  .isPad {
+    display: block !important;
+  }
+  .pc_box {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .isPc {
+    display: block;
+  }
+  .isH5 {
+    display: none;
+  }
+}

@@ -1,0 +1,142 @@
+{{ template "_internal/google_analytics.html" . }}
+<script src="{{ .Site.BaseURL }}js/jquery-3.1.1.min.js?v=20200710"></script>
+<script src="{{ .Site.BaseURL }}js/bootstrap.min.js?v=20200710"></script>
+<script src="{{ .Site.BaseURL }}js/jstree.min.js?v=20200710"></script>
+<script src="{{ .Site.BaseURL }}js/jquery.cookie.min.js?v=20200710"></script>
+<script src="{{ .Site.BaseURL }}js/jquery.waypoints.min.js?v=20200710"></script>
+<script src="{{ .Site.BaseURL }}js/jquery.counterup.min.js?v=20200710"></script>
+<script src="{{ .Site.BaseURL }}js/jquery-parallax.js?v=20200710"></script>
+<script src="{{ .Site.BaseURL }}js/front.js?v=20200710"></script>
+<!-- owl carousel -->
+<script src="{{ .Site.BaseURL }}js/owl.carousel.min.js"></script>
+<!-- used to for mobile -->
+<script src="{{ .Site.BaseURL }}js/flexible.js"></script>
+<script src="{{ .Site.BaseURL }}js/common.js"></script>
+<script src="{{ .Site.BaseURL }}js/dist/jso.js"></script>
+<script src="{{ .Site.BaseURL }}js/cla.js?t=20191230"></script>
+<div id="mask" onclick="hideNav()"></div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        function getRelativePath() {
+            var url = location.href;
+            var arrURL = url.split('//');
+            return arrURL[1].substring(arrURL[1].indexOf('/'));
+        }
+        function getCurrentID(wholeData, relativeURL) {
+            for (var j in wholeData) {
+                var href = wholeData[j].a_attr.href;
+                var text = wholeData[j].text;
+                if ((href === relativeURL) || (text.indexOf(relativeURL) >= 0)) {
+                    return wholeData[j].id;
+                } else {
+                    if (wholeData[j].children.length > 0) {
+                        var v = getCurrentID(wholeData[j].children, relativeURL);
+                        if (v !== '') {
+                            return v;
+                        }
+                    }
+                }
+            }
+            return '';
+        }
+        if ($('#docstreeview').length) {
+            $('#docstreeview').jstree();
+            $('#docstreeview').jstree().hide_dots();
+            $('#docstreeview').jstree().hide_icons();
+            $('#docstreeview').on('changed.jstree', function (e, data) {
+                if (data.node) {
+                    var link = data.node.a_attr.href;
+                    if (link ==='' || link === '#') {
+                        var aElementID = '#' + data.node.id + '_anchor';
+                        var aElement = $(aElementID).find('a');
+                        if (aElement.length) {
+                            link = aElement.attr('href');
+                        }
+                    }
+                    var relativeURL = getRelativePath();
+                    if (link !== relativeURL) {
+                        location.href = link;
+                    }
+                }
+            });
+            $('#docstreeview').on('ready.jstree', function (e, data) {
+                $('#docstreeview').show();
+                var relativeURL = getRelativePath();
+                var wholeData = $('#docstreeview').jstree().get_json();
+                var currentID = getCurrentID(wholeData, relativeURL);
+                $('#docstreeview').jstree()._open_to(currentID);
+                $('#docstreeview').jstree().select_node(currentID);
+                $('#docstreeview').jstree().open_node(currentID);
+                var data = $('#docstreeview').jstree().get_json();
+                var nodeList = [];
+                /*把树状平铺，用于查看是否有上一页下一页*/
+                var getAllData = function (Arr) {
+                    for (var i = 0; i < Arr.length; i++) {
+                        var tempNode = {};
+                        tempNode.id = Arr[i].id;
+                        var href = Arr[i].a_attr.href;
+                        if (href === '#') {
+                            /*转为jq对象特殊处理*/
+                            var jqNode = $(Arr[i].text);
+                            tempNode.href = jqNode.find('a').attr('href');
+                        } else {
+                            tempNode.href = href;
+                        }
+                        nodeList.push(tempNode);
+                        if (Arr[i].children !== []) {
+                            getAllData(Arr[i].children);
+                        }
+                    }
+                };
+                /*获取上一页、下一页*/
+                var nextAndPevious = function (arr, id) {
+                    var result = [];
+                    for (var i = 0; i < arr.length; i++) {
+                        if (arr[i].id === id) {
+                            if (i === 0) {
+                                result.push(null);
+                            } else {
+                                result.push(arr[i - 1].href);
+                            }
+                            if (i === arr.length - 1) {
+                                result.push(null);
+                            } else {
+                                result.push(arr[i + 1].href);
+                            }
+                        }
+                    }
+                    return result;
+                };
+                getAllData(wholeData);
+                var nextAndPeviousArr = nextAndPevious(nodeList, currentID);
+                if (nextAndPeviousArr[0] == null) {
+                    $('#docPreviousPage').attr('disabled', 'disabled');
+                } else {
+                    $('#docPreviousPage').attr('href', nextAndPeviousArr[0]);
+                }
+                if (nextAndPeviousArr[1] == null) {
+                    $('#docNextPage').attr('disabled', 'disabled');
+                } else {
+                    $('#docNextPage').attr('href', nextAndPeviousArr[1]);
+                }
+            });
+        }
+        function showNav() {
+            $('#menu').css({
+                'transform': 'translateX(0)'
+            }).attr('onoff', 'on');
+        }
+        function hideNav() {
+            $('#menu').css({
+                'transform': 'translateX(-100%)'
+            }).attr('onoff', 'off');
+        }
+        $('#slideNav').bind('click', function () {
+            if ($('#menu').attr('onoff') === 'on') {
+                hideNav();
+            } else {
+                showNav();
+            }
+        });
+    });
+</script>

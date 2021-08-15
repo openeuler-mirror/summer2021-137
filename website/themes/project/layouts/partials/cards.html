@@ -1,0 +1,128 @@
+{{$lan := index (split .URL "/") 1 }}
+{{$imgSource :=  (print "../img/websiteBanner_" $lan ".png") }}
+{{$imgSourceMobile :=  (print "../img/websiteBannerMobile_" $lan ".png") }}
+{{$summerBanner := (print "../img/summerBanner_" $lan ".jpg")}}
+{{$summerBannerMobile := (print "../img/summerBannerMobile_" $lan ".jpg")}}
+{{$imgConnect :=  (print "../img/HC_banner_" $lan ".png") }}
+{{$imgWebConnect :=  (print "../img/HC_banner_web_" $lan ".png") }}
+
+
+
+<!-- {{print $imgSourceMobile}} -->
+{{ if isset .Site.Params "cards" }}
+{{ if .Site.Params.cards.enable }}
+{{ if gt (len .Site.Params.card) 0 }}
+<div class="bannernew">
+    <div class="content">
+        <!-- banner -->
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" ontouchstart='getFlag()'
+            ontouchmove='setFlag()' ontouchend='change()'>
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+            </ol>
+            <div class="carousel-inner wrapper" role="listbox">
+                <div class="item active">
+                    <a href="https://live.bilibili.com/22290444"><img src="../img/bannernew.jpg">
+                        <div class="carousel-caption">
+                            <p>{{ i18n "main_cards_live_title" }}</p>
+                            <p>{{ i18n "main_cards_live_subtitle"}}<br>
+                                {{ i18n "main_cards_live_time"}}<br>
+                                {{ i18n "main_cards_live_des"}}</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="{{i18n "main_cards_connect"}}" target="_blank"><img class="pc" src="{{$imgConnect}}"></a>
+                    <a href="{{i18n "main_cards_connect"}}" target="_blank"><img class="mobile" src="{{$imgWebConnect}}" ></a>
+                </div>
+                <div class="item">
+                    <a href="{{i18n "main_cards_summer2020_link" }}" ><img class="pc" src="{{$summerBanner}}"></a>
+                    <a href="{{i18n "main_cards_summer2020_link" }}" ><img class="mobile" src="{{$summerBannerMobile}}" ></a>
+                </div>
+                <div class="item">
+                    <a href="{{i18n "main_cards_first_link"}}"><img class="pc" src="{{$imgSource}}"></a>
+                    <a href="{{i18n "main_cards_first_link"}}"><img class="mobile" src="{{$imgSourceMobile}}" ></a>
+                </div>
+                <div class="item">
+                    <img src="../img/bannernew.jpg">
+                    <div class="carousel-caption">
+                        <p>{{ i18n "main_cards_title" }}</p>
+                        <p>{{ i18n "main_cards_description" }}</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../img/2.jpg">
+                    <div class="carousel-caption">
+                        <p>{{ i18n "main_cards_title_second" }}&nbsp;<a style="font-size:17px;color:white"
+                                href="https://gitee.com/openeuler/iSulad">{{ i18n "main_cards_title_enter_repository"}}</a>
+                        </p>
+                        <p>{{ i18n "main_cards_description_second" }}</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../img/3.jpg">
+                    <div class="carousel-caption">
+                        <p>{{ i18n "main_cards_title_third" }}&nbsp;<a style="font-size:17px;color:white"
+                                href="https://gitee.com/openeuler/A-Tune">{{ i18n "main_cards_title_enter_repository"}}</a>
+                        </p>
+                        <p>{{ i18n "main_cards_description_third" }}</p>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+    <div class="cards">
+        <ul>
+            {{ range .Site.Params.card }}
+            <a href="{{ .url }}">
+                <!--<img src="{{ .image }}" alt="{{ .title }}">-->
+                <li>
+                    <i class="icon icon{{ .weight }}"></i>
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .description }}</p>
+                </li>
+            </a>
+            {{ end }}
+        </ul>
+    </div>
+</div>
+<script>
+    var flagX, flagXM;
+
+    function getFlag() {
+        flagX = event.touches[0].pageX;
+        flagXM = flagX;
+    }
+
+    function setFlag() {
+        flagXM = event.touches[0].pageX;
+    }
+
+    function change() {
+        var range = flagXM - flagX;
+
+        if (Math.abs(range) < 30) {
+            return false;
+        }
+        var direction = range < 0 ? 'next' : 'prev';
+        $("#carousel-example-generic").carousel(direction);
+    }
+
+
+</script>
+
+{{ end }}
+{{ end }}
+{{ end }}

@@ -1,0 +1,48 @@
+{{ if isset .Site.Params "emails" }}
+{{ if .Site.Params.emails.enable }}
+
+<div class="emailAndApply">
+        <div class="emailAndApplyBox">
+                <div class="emailAndApplyBoxL2" >
+                        <h2>{{ i18n "main_email_subscribe_title" }}</h2>
+                        <ul >
+                                {{ $mls := .Paginate (where .Data.Pages "Type" "maillist") }}
+                                {{ $sortedmls :=  $mls.Pages.ByParam "weight" }}
+                                {{ range first 1 $sortedmls}}
+                                <li>
+                                        <div>
+                                                <h3><a href="mailto:{{ .Params.emailaddress }}">{{ .Params.emailaddress }}</a></h3>
+                                                <p> {{ .Params.description }}</p>
+                                        </div>
+                
+                                        <a href="{{ .Params.websitelink}}" target="_blank">
+                                                <div class="btn">{{ i18n "main_email_subscribe_buttontext" }} </div>
+                                        </a>
+                                </li>
+                                {{ end }}
+                        </ul>
+                        <h3 >{{i18n "main_mail_more"}}<a href='{{i18n "main_mail_more_link"}}' style="color:white;">{{i18n "main_mail_more_list"}}</a></h3>
+                </div>
+                <div class="emailAndApplyBoxL2 emailAndApplyBoxL3" >
+                        <h2>{{i18n "main_apply_source"}}</h2>
+                        <ul>
+                                <li>
+                                        <div>
+                                                <h3>{{i18n "main_apply_description"}}</h3>
+                                        </div>
+                
+                                        <a href='{{i18n "main_apply_guidanceLink"}}' target="_blank">
+                                                <div class="btn">{{i18n "main_apply_guidance"}} </div>
+                                        </a>
+                                </li>
+                        </ul>
+                        <h3 >{{i18n "main_apply_thanks"}}<a href='{{i18n "main_apply_pengchenLink"}}'  target="_blank" style="color:white;">{{i18n "main_apply_pengchenLab"}}</a>{{i18n "main_apply_sponsore"}}</h3>
+                       
+                </div>
+        </div>
+        
+        
+</div>
+
+{{ end }}
+{{ end }}

@@ -1,0 +1,29 @@
+{{ if isset .Site.Params "news" }}
+{{ if .Site.Params.news.enable }}
+
+<div class="news active">
+    <h2>
+        {{ i18n "main_news_title" }}
+        <a href="{{ "/news.html" | relLangURL }}">
+            <p> {{ i18n "main_list_more" }} ></p>
+        </a>
+    </h2>
+
+    <ul>
+        {{ $posts := where .Data.Pages "Type" "news" }}
+        {{ range first 4 $posts }}
+
+        <li>
+            <h6>
+                <span>{{ i18n "main_news_subtitle" }}</span> <i>|</i> <span>{{ .Date.Format .Site.Params.date_format }}</span>
+            </h6>
+            <a href="{{ .URL }}">
+                <p>{{ .Title }}</p>
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</div>
+
+{{ end }}
+{{ end }}

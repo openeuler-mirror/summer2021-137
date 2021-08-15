@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+{{ partial "head.html" . }}
+<body>
+    <div id="all">
+        <header>
+            {{ partial "nav.html" . }}
+        </header>
+            {{ partial "breadcrumbs.html" . }}
+            
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 downloadWholeBlock"id="tabArchi">
+                        {{ range where $.Page.Site.Pages "Type" "releases" }}
+                        {{ if .Params }}
+                        {{ if .Params.isLastestVersion}}
+                        <div id="downloadBlock">
+                            <div class="downloadContentBlock">
+                                <div class="downloadVersion"><strong style="font-size:18px;">{{.Params.version}}</strong>&nbsp;&nbsp;&nbsp;&nbsp;<span><a href='{{ i18n "download_versionsUrl"}}'>{{ i18n "download_allRelease"}}</a></span></div>
+                                <div class="downloadDescription">{{ .Content }}</div>
+                                {{ if .Params.releaseNote}}
+                                <div class="titleLine1"><strong>{{ i18n "download_releaseNote"}}</strong><a href="{{.Params.releaseNote}}" target="_blank">Link</a></div>
+                                {{ end }}
+                                <div class="titleLine1"><strong>{{ i18n "download_getiso"}}</strong><a href="{{.Params.ISOUrl}}" target="_blank">Link</a></div>
+                                {{ if .Params.installationGuide}}
+                                <div class="titleLine1"><strong>{{ i18n "download_installationGuide"}}</strong><a href="{{.Params.installationGuide}}" target="_blank">Link</a></div>
+                                {{ end }}
+                                <div class="titleLine1"><strong>{{ i18n "download_lifecycle"}}</strong><a href="./lifecycle.html" target="_blank">Link</a></div>
+                                <div class="titleLine1"><strong>{{ i18n "download_issues"}}</strong><a href="https://gitee.com/openeuler/community-issue" target="_blank">Link</a></div>
+                            </div>
+                        </div>
+                        {{ end }}
+                        {{ end }}
+                        {{ end }}
+                    </div>  
+                </div>
+            </div>
+            <!-- /.container -->
+        </div>
+        {{ partial "footer.html" . }}
+
+    </div>
+    <!-- /#all -->
+
+    {{ partial "scripts.html" . }}
+
+
+
+</body>
+
+</html>

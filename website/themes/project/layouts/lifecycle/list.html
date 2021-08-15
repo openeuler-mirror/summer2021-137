@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+{{ partial "head.html" . }}
+<body>
+    <div id="all">
+        <header>
+            {{ partial "nav.html" . }}
+        </header>
+            {{ partial "breadcrumbs.html" . }}
+            
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        {{ range where $.Page.Site.Pages "Type" "lifecycle" }}
+                            <div>{{ .Content }}</div>
+                        {{ end }}
+                    </div>  
+                </div>
+            </div>
+            <!-- /.container -->
+        </div>
+        {{ partial "footer.html" . }}
+
+    </div>
+    <!-- /#all -->
+
+    {{ partial "scripts.html" . }}
+
+
+
+</body>
+
+</html>

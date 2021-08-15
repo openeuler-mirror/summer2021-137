@@ -1,0 +1,2 @@
+## Will it be possible to review the highlights after the meeting?
+ After the conference, we will upload the video to the domestic and international video sites as soon as possible and post the content on the website as soon as possible, so please stay tuned for our updates. Follow openEuler's Twitter account https://weibo.com/openEuler and Twitter account https://twitter.com/openEuler for content updates.

@@ -1,0 +1,25 @@
+<div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {{ $version := .File.Dir }}
+                {{ if in $version "docs" }}
+                {{ $versionArr := split $version "docs" }}
+                {{ $versionArr := index $versionArr 1 }}
+                {{ $versionArr := split $versionArr "/" }}
+                {{ $versionArr := index $versionArr 1 }}
+                {{ $versionArr := string $versionArr }}
+                {{ $versionArr := replace $versionArr "_" " "}}
+                <h1 class="text-uppercase">{{ upper $versionArr }}</h1>
+                {{ end }}
+                {{ if in $version "about_openeuler" }}
+                <h1 class="text-uppercase">About us</h1>
+                {{ else if in $version "summitfaq" }}
+                <h1 class="text-uppercase">Virtual Summit 2020 - FAQs</h1>
+                {{ else }}
+                <h1>{{ .Title }}</h1>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<footer>
+    <div class="foot isPc">
+        <div class="contact">
+            <h2>{{ .Site.Params.author | safeHTML }}</h2>
+            <div class="flex align-center">
+                <p><a href="mailto:{{ .Site.Params.email | safeHTML }}">{{ .Site.Params.email | safeHTML }}</a></p>
+            </div>
+        </div>
+        <div class="notice">
+            <div class="notice-box">
+                {{ .Site.Params.copyright.text | safeHTML }}
+            </div>
+        </div>
+        <div class="qr-code">
+            <img id="imgRight" src="/img/banners/QRcode.jpg" alt="" >
+            <p>{{ i18n "main_footer_QRcode" }}</p>
+        </div>
+    </div>
+    <div class="foot isH5">
+        <div class="contact">
+            <h2>{{ .Site.Params.author | safeHTML }}</h2>
+            <div class="flex align-center">
+                <p><a href="mailto:{{ .Site.Params.email | safeHTML }}">{{ .Site.Params.email | safeHTML }}</a></p>
+            </div>
+        </div>
+        <div class="qr-code">
+            <img id="imgRight" src="/img/banners/QRcode.jpg" alt="" >
+            <p>{{ i18n "main_footer_QRcode" }}</p>
+        </div>
+        <div class="notice">
+            <div class="notice-box">
+                {{ .Site.Params.copyright.text | safeHTML }}
+            </div>
+        </div>
+    </div>
+</footer>

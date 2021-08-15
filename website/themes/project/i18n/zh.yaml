@@ -1,0 +1,98 @@
+- id: home
+  translation: "首页"
+
+- id: templateBy
+  translation: "模板来自"
+
+- id: portedBy
+  translation: "移植到 Hugo 来自"
+
+- id: contactGoTo
+  translation: "跳到联系页面"
+
+- id: contactAddrTitle
+  translation: "地址"
+
+- id: contactTitle
+  translation: "联系"
+
+- id: contactForm
+  translation: "联系表单"
+
+- id: contactName
+  translation: "你的名字"
+
+- id: contactMail
+  translation: "你的 Email"
+
+- id: contactMessage
+  translation: "你的信息"
+
+- id: contactSend
+  translation: "发送信息"
+
+- id: navHome
+  translation: "跳到首页"
+
+- id: navToggle
+  translation: "切换导航"
+
+- id: categoriesTitle
+  translation: "分类"
+
+- id: searchTitle
+  translation: "搜索"
+
+- id: tagsTitle
+  translation: "标签"
+
+- id: continueReading
+  translation: "查看全文"
+
+- id: archivesTitle
+  translation: "归档"
+
+- id: readMore
+  translation: "阅读更多"
+
+- id: authorBy
+  translation: "由"
+
+- id: recentPosts
+  translation: "最新博客"
+
+- id: aboutUs
+  translation: "关于我们"
+
+- id: newer
+  translation: "上一页"
+
+- id: older
+  translation: "下一页"
+
+- id: publishedOn
+  translation: "在"
+
+- id: downloadImage
+  translation: "下载镜像"
+
+- id: versionsTitle
+  translation: "版本"
+
+- id: versionNumber
+  translation: "版本号"
+
+- id: architecture
+  translation: "架构"
+
+- id: releaseTime
+  translation: "发布时间"
+
+- id: endOfLife
+  translation: "停止维护"
+
+- id: imagesDownload
+  translation: "镜像下载"
+
+- id: packageDownload
+  translation: "包下载"

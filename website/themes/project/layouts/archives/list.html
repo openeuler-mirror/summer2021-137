@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+    {{ partial "head.html" . }}
+
+
+
+    <div id="all">
+
+        <header>
+
+            {{ partial "nav.html" . }}
+
+        </header>
+
+        {{ partial "breadcrumbs.html" . }}
+
+        <div id="content">
+
+            <div class="container">
+
+                <div class="row">
+
+
+        <div class="col-md-8">
+
+            <section class="post">
+
+            {{range .Data.Pages}}
+            <h3 style="font-family: 方正兰亭中黑;"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <h5 class="author-category">
+                {{ if isset .Params "author" }}
+                {{ .Params.author }}
+                {{ end }}
+            </h5>
+
+            <p style="float:right;margin-right:76px;" class="date-comments">
+                <a href="{{ .Permalink }}"><i class="fa fa-calendar-o"></i>
+                {{ .Date.Format .Site.Params.date_format }}</a>
+            </p>
+
+            <br>
+            <p>{{ .Params.Summary }}</p>
+            </section>
+            {{ end }}
+
+            <ul class="pager">
+                {{ if .Paginator.HasPrev }}
+                <li class="previous"><a href="{{ .Paginator.Prev.URL }}">&larr; {{ i18n "newer" }}</a></li>
+                {{ else }}
+                <li class="previous disabled"><a href="#">&larr; {{ i18n "newer" }}</a></li>
+                {{ end }}
+
+                {{ if .Paginator.HasNext }}
+                <li class="next"><a href="{{ .Paginator.Next.URL }}">{{ i18n "older" }} &rarr;</a></li>
+                {{ else }}
+                <li class="next disabled"><a href="#">{{ i18n "older" }} &rarr;</a></li>
+                {{ end }}
+            </ul>
+        </div>
+
+
+        <div class="col-md-4">
+            <h3 style="overflow:hidden;font-family: 方正兰亭中黑;"><a href="/zh/blogguidance.html"><img src="{{ "/svg/edit.svg" }}" alt="edit" >
+            {{i18n "main_postablog_source"}}</a></h3>
+            {{partial "widgets/tags.html" . }}
+            {{partial "widgets/archives.html" . }}
+
+        </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+
+    {{ partial "footer.html" . }}
+
+    </div>
+
+    {{ partial "scripts.html" . }}
+
+
+</html>

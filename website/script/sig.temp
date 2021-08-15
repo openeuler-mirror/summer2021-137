@@ -1,0 +1,7 @@
++++
+name="{{sig_name}}"
+mailList="dev@openeuler.org"
+ircChannel="#openeuler-dev"
+maintainers="{{maintainers}}"
+homepage="https://gitee.com/openeuler/community/tree/master/sig/{{sig_name}}"
++++

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+{{ partial "head.html" . }}
+
+<body>
+    <div id="all">
+
+        <header>
+
+          {{ partial "nav.html" . }}
+
+        </header>
+
+        {{ partial "breadcrumbs.html" . }}
+
+        <div id="content">
+          <div class="container">
+            <div class="col-sm-12 building">
+              <div >
+                <img class="buildingImg"src="/img/building.svg">
+                <h2 class="text-muted">{{ .Content }}</h2>
+                <p class="buttons">
+                  <a href="{{ .Site.BaseURL | relLangURL }}" class="btn btn-template-main">
+                    <i class="fa fa-home"></i>{{ i18n "404_homepage" }}
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+      </div>
+    {{ partial "footer.html" . }}
+  </div>
+  {{ partial "scripts.html" . }}
+</body>
+
+</html>

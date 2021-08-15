@@ -1,0 +1,13 @@
+[[menu.main]]
+    identifier = "{{version}}"
+    name = "{{version}}"
+    parent = "docs"
+    url = "/en/docs/{{version}}/docs/Installation/Installation.html"
+    #weight=4
+
+[[languages.zh.menu.main]]
+    identifier = "{{version}}"
+    name = "{{version}}"
+    parent = "docs"
+    url = "/zh/docs/{{version}}/docs/Releasenotes/release_notes.html"
+    weight = 2

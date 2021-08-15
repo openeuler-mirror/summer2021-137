@@ -1,0 +1,15 @@
+{{ if isset .Site.Params "why" }}
+{{ if .Site.Params.why.enable }}
+<div class="reason">
+    {{ $whys := where .Data.Pages "Type" "intro" }}
+    {{ range first 1 $whys }}
+        <h2>{{ .Params.question }}</h2>
+        <div class="content_why">
+            <div class="detail">
+                {{ .Content }}
+            </div>
+        </div>
+    {{ end }}
+</div>
+{{ end }}
+{{ end }}

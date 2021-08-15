@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+  {{ partial "head.html" . }}
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          {{ partial "nav.html" . }}
+
+        </header>
+
+        {{ partial "breadcrumbs.html" . }}
+
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">{{ .Summary }}</div>
+                    <div class="col-md-12" id="sigSection" style="margin-bottom: 30px;">
+                            {{ range where $.Page.Site.Pages "Type" "sig" }}
+                            {{ if .Params }}
+                            {{ if .Params.name}}
+                            <div class="row">
+                                <div class="col-md-12" >
+                                    <div class="blockTitle">{{  .Params.name}}</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="blockContent">
+                                        {{ if .Params.mission}}
+                                        <div class="dataBlock">{{ .Params.mission}}</div>
+                                        {{ end }}
+                                        <div class="dataBlock">{{ i18n "sig_mail_list"}}<a href="mailto:{{ .Params.mailList}}">{{ .Params.mailList}}</a></div>
+                                        <div class="dataBlock">{{ i18n "sig_IRC_channel"}}{{ .Params.ircChannel}}</div>
+                                        <div class="dataBlock">{{ i18n "sig_maintainers"}}{{ .Params.maintainers}}</div>
+                                        <div class="dataBlock">{{ i18n "sig_homepage"}}<a href={{ .Params.homepage}}>{{ .Params.homepage}}</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        {{ end }}
+                        {{ end }}
+                        {{ end }}
+                    </div>
+                    <!-- /.col-md-9 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /#content -->
+
+        {{ partial "footer.html" . }}
+
+    </div>
+    <!-- /#all -->
+
+    {{ partial "scripts.html" . }}
+
+  </body>
+</html>

@@ -1,0 +1,6 @@
+public
+resources
+resources/_gen
+.idea
+
+.DS_Store

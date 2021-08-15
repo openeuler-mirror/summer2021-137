@@ -1,0 +1,29 @@
+{{ if isset .Site.Params "blog" }}
+{{ if .Site.Params.blog.enable }}
+
+<div class="news active">
+    <h2>
+        {{ i18n "main_blog_title" }}
+        <a href="{{ "/blog.html" | relLangURL }}" target="_blank">
+            <p> {{ i18n "main_list_more" }} </p>
+        </a>
+    </h2>
+
+    <ul>
+        {{ $posts := where .Data.Pages "Type" "blog" }}
+        {{ range first 4 $posts }}
+
+        <li>
+            <h6>
+                <span>{{ i18n "main_blog_subtitle" }}</span> <i>|</i> <span>{{ .Date.Format .Site.Params.date_format }}</span>
+            </h6>
+            <a href="{{ .URL }}">
+                <p>{{ .Title }}</p>
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</div>
+
+{{ end }}
+{{ end }}

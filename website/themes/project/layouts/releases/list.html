@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+  {{ partial "head.html" . }}
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          {{ partial "nav.html" . }}
+
+        </header>
+
+        {{ partial "breadcrumbs.html" . }}
+
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    <!--<h3>{{ i18n "versions_versionPlan"}}</h3>
+                    <div class="col-md-12"style="margin-bottom:20px;">{{ .Summary }}</div>
+                    <h3 >Releases</h3>-->
+                    <div class="col-md-12" id="versionReleases" eleasestyle="margin-bottom: 30px;">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <th width="14%">{{ i18n "versions_versionName"}}</th>
+                                <th width="14%">{{ i18n "versions_status"}}</th>
+                                <th width="14%">{{ i18n "versions_releaseTime"}}</th>
+                                <th width="14%">{{ i18n "versions_releaseNote"}}</th>
+                                <th width="14%">{{ i18n "versions_EOLTime"}}</th>
+                                <th width="14%">{{ i18n "versions_getiso"}}</th>
+                                <th width="16%">{{ i18n "versions_installationGuide"}}</th>
+                            </thead>
+                            <tbody>
+                                {{ range where $.Page.Site.Pages "Type" "releases" }}
+                                {{ if .Params }}
+                                {{ if .Params.version}}
+                                    <tr>
+                                        <td>{{ .Params.version}}</td>
+                                        <td>{{ .Params.status}}</td>
+                                        <td>{{ .Params.releaseDate}}</td>
+                                        {{ if .Params.releaseNote}}
+                                        <td><a href="{{ .Params.releaseNote}}" target="_blank">Link</a></td>
+                                        {{ else }}
+                                        <td>-</td>
+                                        {{ end }}
+                                        <td>{{ .Params.EOLDate}}</td>
+                                        <td><a href="{{ .Params.ISOUrl}}" target="_blank">Link</a></td>
+                                        {{ if .Params.installationGuide}}
+                                        <td><a href="{{ .Params.installationGuide}}" target="_blank">Link</a></td>
+                                        {{ else }}
+                                        <td>-</td>
+                                        {{ end }}
+                                    </tr>
+                                {{ end }}
+                                {{ end }}
+                                {{ end }}
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.col-md-9 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /#content -->
+
+        {{ partial "footer.html" . }}
+
+    </div>
+    <!-- /#all -->
+
+    {{ partial "scripts.html" . }}
+
+  </body>
+</html>
